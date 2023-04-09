@@ -1,0 +1,101 @@
+<main class="content">
+  <h2>Search for a recipe</h2>
+  <div class="inputGroup">
+    <input
+      type="text"
+      placeholder="Search for a tasty byte"
+      class="search"
+      [(ngModel)]="searchquery"
+    />
+    <button (click)="getRecipes()">Find a byte!</button>
+  </div>
+  <h3>Filters</h3>
+  <div class="filters">
+    <div class="filterblock">
+      <h3>Mealtype</h3>
+      <button
+        class="filterButton"
+        id="&dishType=Starter"
+        (click)="addFilter('&dishType=Starter')"
+      >
+        Starter
+      </button>
+      <button
+        class="filterButton"
+        id="&dishType=Main%20course"
+        (click)="addFilter('&dishType=Main%20course')"
+      >
+        Main course
+      </button>
+      <button
+        class="filterButton"
+        id="&dishType=Desserts"
+        (click)="addFilter('&dishType=Desserts')"
+      >
+        Desserts
+      </button>
+    </div>
+    <div class="filterblock">
+      <h3>Diet</h3>
+      <button
+        class="filterButton"
+        id="&health=vegan"
+        (click)="addFilter('&health=vegan')"
+      >
+        Vegan
+      </button>
+      <button
+        class="filterButton"
+        id="&health=vegetarian"
+        (click)="addFilter('&health=vegetarian')"
+      >
+        Vegetarian
+      </button>
+      <button
+        class="filterButton"
+        id="&health=pork-free"
+        (click)="addFilter('&health=pork-free')"
+      >
+        Pork-free
+      </button>
+    </div>
+    <div class="filterblock">
+      <h3>Allergies</h3>
+      <button
+        class="filterButton"
+        id="&health=gluten-free"
+        (click)="addFilter('&health=gluten-free')"
+      >
+        Gluten free
+      </button>
+      <button
+        class="filterButton"
+        id="&health=dairy-free"
+        (click)="addFilter('&health=dairy-free')"
+      >
+        Dairy free
+      </button>
+      <button
+        class="filterButton"
+        id="&health=peanut-free"
+        (click)="addFilter('&health=peanut-free')"
+      >
+        Peanut-free
+      </button>
+    </div>
+  </div>
+
+  <article class="itemCard" *ngFor="let recipe of allRecipies">
+    <h2>{{ recipe.label }}</h2>
+
+    <img [src]="recipe.image" [alt]="recipe.label" />
+    <a routerLink="recipe-details/{{ recipe.id }}">View more</a>
+
+    <p>Ingredients for this byte:</p>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredientLines">
+        {{ ingredient }}
+      </li>
+    </ul>
+  </article>
+</main>

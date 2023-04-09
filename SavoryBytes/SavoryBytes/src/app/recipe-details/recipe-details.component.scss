@@ -1,0 +1,44 @@
+@import "../../shared.scss";
+
+.content {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+
+    .itemCard {
+        width: 45em;
+        h2 {
+            font-family: 'Rochester';
+            font-size: 3em;
+        }
+        img {
+            border-radius: 3em;
+        }
+    
+        background: linear-gradient($warm-orange, #f7c76c);
+        margin: 1em;
+        border-radius: 2em;
+        padding: 2em;
+    
+        p {
+            font-family: 'Montserrat';
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            font-family: 'Montserrat';
+    
+        }
+        a {
+            font-size: 1.5em;
+            color: black;
+            text-decoration: none;
+            font-family: 'Montserrat';
+        }
+    }
+}

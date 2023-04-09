@@ -1,0 +1,20 @@
+<header class="header">
+  <nav class="navbar">
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+    <a
+      *ngIf="userLoggedIn == false"
+      routerLink="/login"
+      routerLinkActive="active"
+      >Login</a
+    >
+    <button *ngIf="userLoggedIn == true" (click)="logout()">Log out</button>
+  </nav>
+  <div class="hero">
+    <a routerLink="/" routerLinkActive="active" class="title">
+      <h1 id="savory">Savory Bytes</h1>
+    </a>
+    <p class="slogan">Taste the world, one byte at a time</p>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

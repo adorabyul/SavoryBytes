@@ -1,0 +1,16 @@
+<div class="content">
+  <article class="itemCard">
+    <h2>{{ recipe.label }}</h2>
+    <p>{{ recipe.mealType }}</p>
+
+    <img [src]="recipe.image" [alt]="recipe.label" />
+
+    <p>Ingredients for this byte:</p>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredientLines">
+        {{ ingredient }}
+      </li>
+    </ul>
+    <a href="{{ recipe.url }}"> Source: {{ recipe.source }}</a>
+  </article>
+</div>

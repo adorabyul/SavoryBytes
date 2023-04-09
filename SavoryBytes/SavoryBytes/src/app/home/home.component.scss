@@ -1,0 +1,129 @@
+@import '../../shared.scss';
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+
+    h2 {
+        font-family: 'Rochester';
+        font-size: 2em;
+    }
+    h3 {
+        font-family: 'Rochester';
+        font-size: 2em;
+    }
+    
+    .inputGroup {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .search {
+            padding: 0.7em;
+            width: 15em;
+            border: 1px solid black;
+            border-radius: 2em;
+   
+        }
+        button {
+            margin-left: 1em;
+            margin-top: 0.5em;
+            border-radius: 2em;
+            border: 1px solid black;
+            background-color: white;
+            padding: 1em;
+        }
+    }
+    .filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: -2em;
+        .filterblock {
+            margin: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h3 {
+                font-family: 'Montserrat';
+                font-size: 1em;
+            }
+
+            .filterButton {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+                margin: 0.5em;
+                border: 1px solid black;
+                border-radius: 0.5em;
+                padding: 0.5em;
+                background-color: white;
+            }
+        }
+    }
+    
+    
+
+    .itemCard {
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        img {
+            border-radius: 1em;
+            width: 25vw;
+            min-width: 7em;
+            height: auto;
+        }
+
+        background: linear-gradient($warm-orange, #f7c76c);
+        margin: 1em;
+        border-radius: 2em;
+        padding: 2em;
+
+        p {
+            font-family: 'Montserrat';
+        }
+        a {
+            font-family: 'Montserrat';
+            color: black;
+            text-decoration: none;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            font-family: 'Montserrat';
+
+        }
+    }
+}
+
+@media only screen and (min-width: 811px) {
+    .content {
+        .inputGroup
+        {
+            .search {
+                width: 50em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 423px) {
+    .content {
+        .inputGroup
+        {
+            .search {
+                width: 30em;
+            }
+        }
+    }
+}
+
