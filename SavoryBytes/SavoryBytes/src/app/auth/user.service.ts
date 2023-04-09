@@ -19,7 +19,7 @@ export class UserService {
       'Authorization': 'Bearer '
     })
   }
-  configUrl = "http://127.0.0.1:8000/api/";
+  configUrl = "https://savorybytes-production.up.railway.app/api/";
 
 
   constructor(private http: HttpClient) { }
